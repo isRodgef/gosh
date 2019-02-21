@@ -6,6 +6,10 @@ import "os/exec"
 import "bufio"
 import "strings"
 
+func	cd(dirname string){
+	os.Chdir(dirname)
+}
+
 func   runCmd(cmd string){
 	cmd = strings.TrimSuffix(cmd, "\n")
 	to_exec := exec.Command(cmd)
