@@ -8,9 +8,14 @@ func    echo(val string){
 } 
 
 func	cd(dirname string){
-	os.Chdir(dirname)
+	value := ""
+	if dirname == "-"{
+		value = "prev"
+	}else if dirname == "~"{
+		value = "home"
+	}
+	if value == ""{
+		os.Chdir(dirname)
+	}
 }
 
-func main(){
-	echo ("L");
-}
