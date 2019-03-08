@@ -1,7 +1,24 @@
+package main
+
+//import (
+//	"os"
+//)
+
 type state struct{
-	string input 
-	string env
-	string 
+	input			string  
+	env 			[]string 
+	oldpwd 			string 	
+	currpwd 		string 
 }
 
-vu
+func initState(input string) state {
+	ret := state{}
+	return ret
+
+}
+
+
+func main(){
+	initState("ss")
+}
+
