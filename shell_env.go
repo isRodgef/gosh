@@ -24,9 +24,3 @@ func initState(input string) shell_state {
 	return ret
 
 }
-
-
-func main(){
-	initState("ss")
-}
-
