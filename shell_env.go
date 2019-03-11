@@ -24,3 +24,7 @@ func initState(input string) shell_state {
 	return ret
 
 }
+
+func changeInput(state shell_state,input string) {
+	state.input = input
+}
