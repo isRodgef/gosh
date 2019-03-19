@@ -5,7 +5,7 @@ import "os"
 import "os/exec"
 import "strings"
 
-func   runCmd(cmd string){
+func   run_exec(cmd string){
 	cmd = strings.TrimSuffix(cmd, "\n")
 	to_exec := exec.Command(cmd)
 	to_exec.Stdout = os.Stdout
