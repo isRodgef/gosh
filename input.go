@@ -8,6 +8,10 @@ func clear_space(buffer string) []string{
 }
 
 func is_builtin(cmdName string) bool {
+	if (cmdName == "echo"){
+		return true;
+	}
+	
 	return false;
 }
 

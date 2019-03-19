@@ -2,7 +2,6 @@ package main
 
 import (
 	"os"
-	"fmt"
 )
 
 type shell_state struct{
@@ -28,7 +27,6 @@ func initState(input string) shell_state {
 
 func changeInput(state shell_state,input string) {
 	state = initState(input);
-	fmt.Println(state.input);
 
 	
 }
