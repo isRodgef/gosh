@@ -8,7 +8,9 @@ type shell_state struct{
 	input			string  
 	env 			[]string 
 	oldpwd 			string 	
-	pwd 		string 
+	pwd 			string
+	buitins			map[string]string 
+	
 }
 
 func initState(input string) shell_state {
@@ -26,9 +28,7 @@ func initState(input string) shell_state {
 }
 
 func changeInput(state shell_state,input string) {
-	state = initState(input);
-
-	
+	state = initState(input);	
 }
 
 
