@@ -12,5 +12,7 @@ func is_builtin(cmdName string) bool {
 }
 
 func runCmd(tokenized []string){
-	if is_builtin()
+	if is_builtin(tokenized[0]){
+		echo(tokenized[0]);
+	}
 }
