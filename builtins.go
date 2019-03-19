@@ -7,7 +7,7 @@ func    echo(val string){
 	fmt.Sprintln(val)
 } 
 
-func	cd(dirname string){
+func	cd(dirname string) bool{
 	value := ""
 	if dirname == "-"{
 		value = "prev"
@@ -17,5 +17,6 @@ func	cd(dirname string){
 	if value == ""{
 		os.Chdir(dirname)
 	}
+	return false;
 }
 

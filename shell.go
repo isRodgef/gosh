@@ -16,7 +16,7 @@ func main() {
 		if err != nil{
 			fmt.Fprintln(os.Stderr,err)
 		}
-		shell = initState(input)
-		fmt.Printf("%s\n",shell.input)
+		changeInput(shell,input)
+		///fmt.Printf("%s\n",shell.input)
 	}
 }
