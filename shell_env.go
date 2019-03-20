@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+	"strings"
 )
 
 type shell_state struct{
@@ -28,7 +29,7 @@ func initState(input string) shell_state {
 }
 
 func changeInput(state shell_state,input string) {
-	state = initState(input);	
+	state = initState(strings.TrimSuffix(input, "\n"));	
 }
 
 
