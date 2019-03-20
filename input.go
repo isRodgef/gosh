@@ -9,20 +9,20 @@ func clear_space(buffer string) []string{
 
 
 /// refactor this to use some sort of map
-func is_builtin(cmdName string) bool {
-	if (cmdName == "echo"){
+func is_builtin(state shell_state) bool {
+	if (state.tokenized[0] == "echo"){
 		return true;
 	}
 	
-	if (cmdName == "cd"){
+	if (state.tokenized[0] == "cd"){
 		return true;
 	}
 	
 	return false;
 }
 
-func runCmd(tokenized []string){
-	if is_builtin(tokenized[0]){
-		echo(tokenized[0]);
+func runCmd(state shell_state){
+	if is_builtin(state){
+		echo(state.input);
 	}
 }

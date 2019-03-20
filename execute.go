@@ -3,12 +3,11 @@ package main
 import "fmt"
 import "os"
 import "os/exec"
-import "strings"
 
-func   run_exec(cmd string){
-	cmd = strings.TrimSuffix(cmd, "\n")
-	fmt.Print(cmd)
-	to_exec := exec.Command(cmd)
+
+func   run_exec(state shell_state){
+	fmt.Print(state.tokenized[0])
+	to_exec := exec.Command(state.tokenized[0])
 	to_exec.Stdout = os.Stdout
         to_exec.Stderr = os.Stderr
 	err := to_exec.Run()
