@@ -8,16 +8,18 @@ import (
 
 
 
-func    echo(val string){
+func    echo(state shell_state){
 	fmt.Sprintln(val)
 } 
 
-func	cd(dirname string) bool{
+func	cd(state *shell_state) bool{
 	value := ""
-	if dirname == "-"{
+	if state.tokenized[0] == "-"{
 		value = "prev"
-	}else if dirname == "~"{
+		return true
+	}else if tokenized[0] == "~"{
 		value = "home"
+		return true
 	}
 	if value == ""{
 		os.Chdir(dirname)
