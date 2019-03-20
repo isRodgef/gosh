@@ -6,16 +6,18 @@ import (
 )
 
 func    echo(state shell_state){
-	fmt.Sprintln(state.tokenized[0])
+	value := state.tokenized[0]
+	fmt.Sprintln(value)
 } 
 
 func	cd(state *shell_state) bool{
-	value := ""
-	if (*state).tokenized[0] == "-"{
-		value = "prev"
+	value :=(*state).tokenized[0]
+	if value == "-"{
+		value = os.Getenv("OLDPWD")
 		return true
-	}else if (*state).tokenized[0] == "~"{
-		value = "home"
+	}else if value == "~"{
+		value = os.Getenv("HOME")
+		os.chdir(value)
 		return true
 	}
 	if value == ""{
