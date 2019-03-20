@@ -7,6 +7,7 @@ import "strings"
 
 func   run_exec(cmd string){
 	cmd = strings.TrimSuffix(cmd, "\n")
+	fmt.Print(cmd)
 	to_exec := exec.Command(cmd)
 	to_exec.Stdout = os.Stdout
         to_exec.Stderr = os.Stderr
