@@ -18,6 +18,10 @@ func main() {
 			fmt.Fprintln(os.Stderr,err)
 		}
 		changeInput(&shell,input)
+		if (shell.tokenized[0] == "echo"){
+			fmt.Printf(shell.tokenized[0])
+		}
 		runCmd(shell)
+		//runCmd(shell)
 	}
 }

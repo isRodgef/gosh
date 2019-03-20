@@ -30,8 +30,9 @@ func initState(input string) shell_state {
 }
 
 func changeInput(state *shell_state,input string) {
-	*state = initState(strings.TrimSuffix(input, "\n"));	
-	state.tokenized = strings.Split(input, " ")
+	trimmed_input := strings.TrimSuffix(input, "\n");
+	*state = initState(trimmed_input);	
+	state.tokenized = strings.Split(trimmed_input, " ")
 }
 
 
