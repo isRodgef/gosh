@@ -5,24 +5,21 @@ import (
 "fmt"
 )
 
-
-
-
 func    echo(state shell_state){
-	fmt.Sprintln(val)
+	fmt.Sprintln(state.tokenized[0])
 } 
 
 func	cd(state *shell_state) bool{
 	value := ""
-	if state.tokenized[0] == "-"{
+	if (*state).tokenized[0] == "-"{
 		value = "prev"
 		return true
-	}else if tokenized[0] == "~"{
+	}else if (*state).tokenized[0] == "~"{
 		value = "home"
 		return true
 	}
 	if value == ""{
-		os.Chdir(dirname)
+		os.Chdir("")
 	}
 	return false;
 }

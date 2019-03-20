@@ -23,6 +23,6 @@ func is_builtin(state shell_state) bool {
 
 func runCmd(state shell_state){
 	if is_builtin(state){
-		echo(state.input);
+		///echo(state.input);
 	}
 }
