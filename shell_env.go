@@ -6,7 +6,8 @@ import (
 )
 
 type shell_state struct{
-	input			string  
+	input			string
+	tokenized		[]string 
 	env 			[]string 
 	oldpwd 			string 	
 	pwd 			string
@@ -30,6 +31,7 @@ func initState(input string) shell_state {
 
 func changeInput(state shell_state,input string) {
 	state = initState(strings.TrimSuffix(input, "\n"));	
+	state.tokenized = strings.Split(input, " ")
 }
 
 

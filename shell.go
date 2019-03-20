@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"bufio"
-	"strings"
 )
 
 
@@ -18,9 +17,6 @@ func main() {
 		
 			fmt.Fprintln(os.Stderr,err)
 		}
-		//fmt.Printf("%c",input[1]);
 		changeInput(shell,input)
-		tokenized :=  strings.Split(input, " ")
-		fmt.Printf("%s ", tokenized[0]);
 	}
 }
