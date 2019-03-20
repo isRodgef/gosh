@@ -17,6 +17,7 @@ func main() {
 		
 			fmt.Fprintln(os.Stderr,err)
 		}
-		changeInput(shell,input)
+		changeInput(&shell,input)
+		runCmd(shell)
 	}
 }
