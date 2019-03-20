@@ -8,4 +8,4 @@ autocomplete
 history 
 piping
 possibly networking
-
+globbing
