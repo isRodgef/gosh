@@ -23,8 +23,11 @@ func is_builtin(state shell_state) bool {
 
 func runCmd(state shell_state){
 	if is_builtin(state){
-		if.state.tokenized == 'echo'{
-			
+		if state.tokenized[0] == "echo"{
+			echo(state)
+		}
+		if state.tokenized[0] == "cd" {
+			cd(&state)
 		}
 		///echo(state.input);
 	}

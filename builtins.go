@@ -6,8 +6,8 @@ import (
 )
 
 func    echo(state shell_state){
-	for i, s := range a {
-		fmt.Println(i, s)
+	for i, s := range state.tokenized {
+		fmt.Println(s)
 	}
 } 
 
