@@ -15,16 +15,19 @@ func    echo(state shell_state){
 
 func	cd(state *shell_state) bool{
 	value :=(*state).tokenized[1]
-	os.Setenv("OLDPWD",value)
+		cwd ,err  := os.Getwd()
+	if err != nil{
+		os.Setenv("OLDPWD",cwd)
+		fmt.Println(cwd)
+	}
 	if value == "-"{
 		value = os.Getenv("OLDPWD")
 		os.Chdir(value)
-		return true
+	//	return true
 	}else if value == "~"{
 		value = os.Getenv("HOME")
-		fmt.Println(value)
 		os.Chdir(value)
-		return true
+	//	return true
 	}
 	if value == ""{
 		os.Chdir((*state).tokenized[1])
