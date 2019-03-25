@@ -7,7 +7,9 @@ import (
 
 func    echo(state shell_state){
 	for i, s := range state.tokenized {
-		fmt.Println(s)
+		if i !=0{
+			fmt.Println(s)
+		}
 	}
 } 
 
