@@ -6,8 +6,9 @@ import (
 )
 
 func    echo(state shell_state){
-	value := state.tokenized[0]
-	fmt.Sprintln(value)
+	for i, s := range a {
+		fmt.Println(i, s)
+	}
 } 
 
 func	cd(state *shell_state) bool{
