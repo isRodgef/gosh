@@ -12,6 +12,11 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	shell := initState("")
 	for{
+		cwd ,er  := os.Getwd()
+		if er != nil{
+			fmt.Print("Cannot get current cwd>>")
+		}
+		fmt.Print(cwd,">>")
 		input, err := reader.ReadString('\n')
 		if err != nil{
 		

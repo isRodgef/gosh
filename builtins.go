@@ -15,7 +15,7 @@ func    echo(state shell_state){
 
 func	cd(state *shell_state) bool{
 	value :=(*state).tokenized[1]
-		cwd ,err  := os.Getwd()
+	cwd ,err  := os.Getwd()
 	if err != nil{
 		os.Setenv("OLDPWD",cwd)
 		fmt.Println(cwd)
