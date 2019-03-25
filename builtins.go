@@ -29,3 +29,11 @@ func	cd(state *shell_state) bool{
 	return false;
 }
 
+func setenv(){
+}
+
+func env(){
+}
+
+func unsetenv(){
+}
