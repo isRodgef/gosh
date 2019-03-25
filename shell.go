@@ -25,5 +25,5 @@ func main() {
 		changeInput(&shell,input)
 		runCmd(shell)
 		//runCmd(shell)
-	}
+	   }
 }

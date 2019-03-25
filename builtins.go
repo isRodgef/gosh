@@ -5,6 +5,10 @@ import (
 "fmt"
 )
 
+func	exit_shell(state shell_state){
+	os.Exit(0)
+}
+
 func    echo(state shell_state){
 	for i, s := range state.tokenized {
 		if i !=0{

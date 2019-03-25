@@ -18,6 +18,10 @@ func is_builtin(state shell_state) bool {
 		return true;
 	}
 	
+	if (state.tokenized[0] == "exit"){
+		return true;
+	}
+	
 	return false;
 }
 
@@ -27,6 +31,8 @@ func runCmd(state shell_state){
 			echo(state)
 		}else if state.tokenized[0] == "cd" {
 			cd(&state)
+		}else if state.tokenized[0] == "exit" {
+			exit_shell(state)
 		}
 		///echo(state.input);
 	}else {
