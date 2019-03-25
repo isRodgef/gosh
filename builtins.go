@@ -17,7 +17,7 @@ func	cd(state *shell_state) bool{
 		return true
 	}else if value == "~"{
 		value = os.Getenv("HOME")
-		os.chdir(value)
+		os.Chdir(value)
 		return true
 	}
 	if value == ""{
